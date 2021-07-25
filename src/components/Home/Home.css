@@ -7,8 +7,8 @@
 .profile-image {
     width: 300px;
     height: 300px;
-    background-image: url('../../images/profileImg.jpg');
-    border: solid 8px rgba(72, 61, 139, 0.5);
+    background-image: url('../../images/ProfileImage.jpg');
+    border: solid 8px rgba(0, 0, 0, 0.8);
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,6 +31,7 @@
 
 .profile-name {
     font-size: 3.2rem;
+    color: black;
 }
 
 .profession {

@@ -8,7 +8,7 @@ library.add(fab, faLinkedin, faGithub, faFacebook, faTwitter, faInstagram);
 
 const Home = () => {
     return (
-        <main className="home-container row gx-5 d-flex align-items-center justify-content-center">
+        <main className="home-container row g-5 d-flex align-items-center justify-content-center">
             <section className="col-md-5 profile-image">
 
             </section>

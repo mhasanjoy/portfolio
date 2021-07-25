@@ -10,10 +10,10 @@ const Sidebar = () => {
                     <Link to="/home" className="nav-link sidebar-link">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="" className="nav-link sidebar-link">About</Link>
+                    <Link to="/about" className="nav-link sidebar-link">About</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="" className="nav-link sidebar-link">Projects</Link>
+                    <Link to="/projects" className="nav-link sidebar-link">Projects</Link>
                 </li>
                 <li className="nav-item">
                     <Link to="/contact" className="nav-link sidebar-link">Contact</Link>

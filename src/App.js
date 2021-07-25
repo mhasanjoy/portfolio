@@ -9,6 +9,8 @@ import Home from './components/Home/Home';
 import NoMatch from './components/NoMatch/NoMatch';
 import Sidebar from './components/Sidebar/Sidebar';
 import Contact from './components/Contact/Contact';
+import About from './components/About/About';
+import Projects from './components/Projects/Projects';
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
           <Switch>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/projects">
+              <Projects></Projects>
             </Route>
             <Route path="/contact">
               <Contact></Contact>

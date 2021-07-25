@@ -19,8 +19,8 @@ const onLoad = marker => {
 
 const Contact = () => {
     return (
-        <main className="m-5 pb-5">
-            <h1 className="mb-5">Get in Touch</h1>
+        <main className="contact-container">
+            <h1 className="mb-5" style={{color: 'black'}}>Get in Touch</h1>
             <LoadScript
                 googleMapsApiKey=""
             >
@@ -36,9 +36,9 @@ const Contact = () => {
                     <></>
                 </GoogleMap>
             </LoadScript>
-            <p className="mt-5 contact-info"><strong>Address:</strong> Bheramara, Kushtia, Bangladesh</p>
-            <p className="mt-5 contact-info"><strong>Email:</strong> m.hasanjoy13@gmail.com</p>
-            <p className="mt-5 contact-info"><strong>Mobile:</strong> +8801738399408</p>
+            <p className="mt-5 contact-info"><strong style={{color: 'black'}}>Address:</strong> Bheramara, Kushtia, Bangladesh</p>
+            <p className="mt-5 contact-info"><strong style={{color: 'black'}}>Email:</strong> m.hasanjoy13@gmail.com</p>
+            <p className="mt-5 contact-info"><strong style={{color: 'black'}}>Mobile:</strong> +8801738399408</p>
         </main>
     );
 };
