@@ -1,7 +1,5 @@
 .sidebar-container {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(211, 211, 211, 0.5);
     position: fixed;
 }
@@ -10,4 +8,10 @@
     color: black;
     font-size: 1.2rem;
     font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .sidebar-container {
+        position: static;
+    }
 }

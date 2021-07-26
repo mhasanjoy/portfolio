@@ -1,15 +1,15 @@
 import React from 'react';
-import './Projects.css';
+import './AllProjects.css';
 import BookShop from '../../images/BookShop.jpg';
-import RideBooking from '../../images/RideBooking.png';
-import PremierLeague from '../../images/PremierLeague.png';
-import WeatherMap from '../../images/WeatherMap.png';
-import Calculator from '../../images/Calculator.png';
-import PenguinFashion from '../../images/PenguinFashion.png';
+import RideBooking from '../../images/RideBooking.jpg';
+import PremierLeague from '../../images/PremierLeague.jpg';
+import WeatherMap from '../../images/WeatherMap.jpg';
+import Calculator from '../../images/Calculator.jpg';
+import PenguinFashion from '../../images/PenguinFashion.jpg';
 import Project from '../Project/Project';
 
 const Projects = () => {
-    const projects = [
+    const allProjects = [
         {
             id: 6,
             name: 'Book Shop using MERN stack',
@@ -65,7 +65,7 @@ const Projects = () => {
             <h1>Some of my projects</h1>
             <section className="row g-5 mt-5">
                 {
-                    projects.map(project => <Project key={project.id} project={project}></Project>)
+                    allProjects.map(project => <Project key={project.id} project={project}></Project>)
                 }
             </section>
         </main>

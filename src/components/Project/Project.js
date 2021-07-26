@@ -7,9 +7,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const Project = (props) => {
     const { name, img, preview, client, server } = props.project;
     return (
-        <div className="col-md-6 project">
+        <div className="col-lg-6 project">
             <p className="project-name">{name}</p>
-            <img src={img} alt="" />
+            <div className="project-image">
+                <img src={img} alt="" />
+            </div>
             <div className="d-flex justify-content-center p-3">
                 <a href={preview} target="_blank" rel="noreferrer" className="project-link"><FontAwesomeIcon icon={faEye} className="project-icon" />Preview</a>
                 <a href={client} target="_blank" rel="noreferrer" className="project-link"><FontAwesomeIcon icon={faGithub} className="project-icon" />Code</a>

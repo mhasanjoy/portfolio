@@ -2,6 +2,8 @@ import React from 'react';
 import './Contact.css';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import { Marker } from '@react-google-maps/api';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faHome, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 
 const containerStyle = {
     width: '100%',
@@ -20,7 +22,7 @@ const onLoad = marker => {
 const Contact = () => {
     return (
         <main className="contact-container">
-            <h1 className="mb-5" style={{color: 'black'}}>Get in Touch</h1>
+            <h1 className="mb-5 color-highlight">Get in Touch</h1>
             <LoadScript
                 googleMapsApiKey=""
             >
@@ -36,9 +38,9 @@ const Contact = () => {
                     <></>
                 </GoogleMap>
             </LoadScript>
-            <p className="mt-5 contact-info"><strong style={{color: 'black'}}>Address:</strong> Bheramara, Kushtia, Bangladesh</p>
-            <p className="mt-5 contact-info"><strong style={{color: 'black'}}>Email:</strong> m.hasanjoy13@gmail.com</p>
-            <p className="mt-5 contact-info"><strong style={{color: 'black'}}>Mobile:</strong> +8801738399408</p>
+            <p className="mt-5 contact-info"><strong className="color-highlight"><FontAwesomeIcon icon={faHome} className="contact-icon" />Address:</strong> Bheramara, Kushtia, Bangladesh</p>
+            <p className="mt-5 contact-info"><strong className="color-highlight"><FontAwesomeIcon icon={faEnvelope} className="contact-icon" />Email:</strong> m.hasanjoy13@gmail.com</p>
+            <p className="mt-5 contact-info"><strong className="color-highlight"><FontAwesomeIcon icon={faMobileAlt} className="contact-icon" />Mobile:</strong> +8801738399408</p>
         </main>
     );
 };

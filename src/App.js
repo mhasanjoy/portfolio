@@ -5,16 +5,16 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from './components/Home/Home';
-import NoMatch from './components/NoMatch/NoMatch';
 import Sidebar from './components/Sidebar/Sidebar';
-import Contact from './components/Contact/Contact';
+import Home from './components/Home/Home';
 import About from './components/About/About';
-import Projects from './components/Projects/Projects';
+import AllProjects from './components/AllProjects/AllProjects';
+import Contact from './components/Contact/Contact';
+import NoMatch from './components/NoMatch/NoMatch';
 
 function App() {
   return (
-    <div className="App row">
+    <div className="row">
       <Router>
         <div className="col-md-3">
           <Sidebar></Sidebar>
@@ -28,7 +28,7 @@ function App() {
               <About></About>
             </Route>
             <Route path="/projects">
-              <Projects></Projects>
+              <AllProjects></AllProjects>
             </Route>
             <Route path="/contact">
               <Contact></Contact>
