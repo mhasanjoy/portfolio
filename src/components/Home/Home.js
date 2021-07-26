@@ -3,8 +3,14 @@ import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faFacebook, faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import firebase from "firebase/app";
+import firebaseConfig from '../../configs/firebase.config';
 
 library.add(fab, faLinkedin, faGithub, faFacebook, faTwitter, faInstagram);
+
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
 
 const Home = () => {
     return (
