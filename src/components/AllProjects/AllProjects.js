@@ -7,6 +7,7 @@ import WeatherMap from '../../images/WeatherMap.jpg';
 import Calculator from '../../images/Calculator.jpg';
 import PenguinFashion from '../../images/PenguinFashion.jpg';
 import Project from '../Project/Project';
+import Footer from '../Footer/Footer';
 
 const Projects = () => {
     const allProjects = [
@@ -61,14 +62,17 @@ const Projects = () => {
     ];
 
     return (
-        <main className="project-container">
-            <h1>Some of my projects</h1>
-            <section className="row g-5 mt-5">
-                {
-                    allProjects.map(project => <Project key={project.id} project={project}></Project>)
-                }
-            </section>
-        </main>
+        <>
+            <main className="project-container">
+                <h1>Some of my projects</h1>
+                <section className="row g-5 mt-5">
+                    {
+                        allProjects.map(project => <Project key={project.id} project={project}></Project>)
+                    }
+                </section>
+            </main>
+            <Footer></Footer>
+        </>
     );
 };
 
