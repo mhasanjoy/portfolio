@@ -37,7 +37,7 @@ const Projects = () => {
         },
         {
             id: 3,
-            name: 'Weather Map by OpenWeatherMap API',
+            name: 'Weather Map using OpenWeatherMap API',
             img: WeatherMap,
             preview: 'https://mhasanjoy.github.io/weather-map/',
             client: 'https://github.com/mhasanjoy/weather-map',
@@ -53,7 +53,7 @@ const Projects = () => {
         },
         {
             id: 1,
-            name: 'E-commerce landing page by Bootstrap',
+            name: 'E-commerce landing page using Bootstrap',
             img: PenguinFashion,
             preview: 'https://mhasanjoy.github.io/penguin-fashion/',
             client: 'https://github.com/mhasanjoy/penguin-fashion',
