@@ -23,7 +23,7 @@ const Home = () => {
                 <section className="offset-xl-1 col-xl-6 d-flex justify-content-center align-items-center">
                     <div>
                         <h1 className="profile-name">Md. Mehedi Hasan</h1>
-                        <p className="profession">Web Developer, Fast Learner, Enthusiastic Programmer</p>
+                        <p className="profession">Web Developer, Enthusiastic Programmer</p>
                         <div className="mt-5 mb-5 pb-5">
                             <a href="https://www.linkedin.com/in/md-mehedi-hasan-90a199143/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']} className="social-icon" /></a>
                             <a href="https://github.com/mhasanjoy" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={['fab', 'github']} className="social-icon" /></a>
