@@ -7,15 +7,37 @@ const CustomCursor = () => {
     const positionRef = useRef({
         mouseX: 0,
         mouseY: 0,
-        destinationX: 0,
-        destinationY: 0,
+        currentX: 0,
+        currentY: 0,
         distanceX: 0,
         distanceY: 0,
         key: -1,
     });
 
     useEffect(() => {
+        mainCursor.current.style.left = `calc(50% - ${
+            mainCursor.current.clientWidth / 2
+        }px)`;
+        mainCursor.current.style.top = `calc(50% - ${
+            mainCursor.current.clientHeight / 2
+        }px)`;
+
+        secondaryCursor.current.style.left = `calc(50% - ${
+            secondaryCursor.current.clientWidth / 2
+        }px)`;
+        secondaryCursor.current.style.top = `calc(50% - ${
+            secondaryCursor.current.clientHeight / 2
+        }px)`;
+    }, []);
+
+    useEffect(() => {
         document.addEventListener('mousemove', (event) => {
+            mainCursor.current.style.left = '0';
+            mainCursor.current.style.top = '0';
+
+            secondaryCursor.current.style.left = '0';
+            secondaryCursor.current.style.top = '0';
+
             const { clientX, clientY } = event;
 
             const mouseX = clientX;
@@ -30,43 +52,35 @@ const CustomCursor = () => {
                 mouseX - mainCursor.current.clientWidth / 2
             }px, ${mouseY - mainCursor.current.clientHeight / 2}px, 0)`;
         });
-
-        return () => {};
     }, []);
 
     useEffect(() => {
         const followMouse = () => {
             positionRef.current.key = requestAnimationFrame(followMouse);
-            const {
-                mouseX,
-                mouseY,
-                destinationX,
-                destinationY,
-                distanceX,
-                distanceY,
-            } = positionRef.current;
+            const { mouseX, mouseY, currentX, currentY, distanceX, distanceY } =
+                positionRef.current;
 
-            if (!destinationX || !destinationY) {
-                positionRef.current.destinationX = mouseX;
-                positionRef.current.destinationY = mouseY;
+            if (!currentX || !currentY) {
+                positionRef.current.currentX = mouseX;
+                positionRef.current.currentY = mouseY;
             } else {
-                positionRef.current.distanceX = (mouseX - destinationX) * 0.033;
-                positionRef.current.distanceY = (mouseY - destinationY) * 0.033;
+                positionRef.current.distanceX = (mouseX - currentX) * 0.033;
+                positionRef.current.distanceY = (mouseY - currentY) * 0.033;
 
                 if (
                     Math.abs(positionRef.current.distanceX) +
                         Math.abs(positionRef.current.distanceY) <
                     0.033
                 ) {
-                    positionRef.current.destinationX = mouseX;
-                    positionRef.current.destinationY = mouseY;
+                    positionRef.current.currentX = mouseX;
+                    positionRef.current.currentY = mouseY;
                 } else {
-                    positionRef.current.destinationX += distanceX;
-                    positionRef.current.destinationY += distanceY;
+                    positionRef.current.currentX += distanceX;
+                    positionRef.current.currentY += distanceY;
                 }
             }
 
-            secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+            secondaryCursor.current.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
         };
 
         followMouse();
@@ -74,12 +88,11 @@ const CustomCursor = () => {
 
     return (
         <>
-            <div className={styles.main_cursor} ref={mainCursor}>
-                <div className={styles.main_cursor_background}></div>
-            </div>
-            <div className={styles.secondary_cursor} ref={secondaryCursor}>
-                <div className={styles.secondary_cursor_background}></div>
-            </div>
+            <div className={styles.main_cursor} ref={mainCursor}></div>
+            <div
+                className={styles.secondary_cursor}
+                ref={secondaryCursor}
+            ></div>
         </>
     );
 };
