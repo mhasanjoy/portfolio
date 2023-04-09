@@ -1,3 +1,5 @@
+@import '../../styles/variable.scss';
+
 .main_cursor,
 .secondary_cursor {
     z-index: 1000;
@@ -10,12 +12,12 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: rgba(41, 163, 133, 0.502);
+    background-color: rgba(41, 165, 135, 0.5);
 }
 
 .secondary_cursor {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid #29a587;
+    border: 1px solid $secondary_color;
 }

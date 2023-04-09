@@ -1,0 +1,11 @@
+@import '../../styles/variable.scss';
+
+.footer {
+    color: $primary_color;
+    text-align: center;
+    text-transform: uppercase;
+
+    .color_highlight {
+        color: $secondary_color;
+    }
+}
