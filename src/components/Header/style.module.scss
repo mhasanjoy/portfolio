@@ -1,0 +1,9 @@
+.header {
+    padding: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 90;
+    transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1);
+}
