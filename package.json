@@ -21,9 +21,5 @@
     "devDependencies": {
         "prettier": "2.8.7",
         "sass": "^1.60.0"
-    },
-    "engines": {
-        "npm": "9.6.1",
-        "node": "18.x"
     }
 }

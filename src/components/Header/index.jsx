@@ -1,9 +1,5 @@
-// import MailIcon from '@mui/icons-material/Mail';
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -75,7 +71,13 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <div>
+            <div className={styles.menu_btn}>
+                <div className={styles.icon}>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            {/* <div>
                 {['left', 'right', 'top', 'bottom'].map((anchor) => (
                     <React.Fragment key={anchor}>
                         <Button onClick={toggleDrawer(anchor, true)}>
@@ -90,7 +92,7 @@ const Header = () => {
                         </Drawer>
                     </React.Fragment>
                 ))}
-            </div>
+            </div> */}
         </header>
     );
 };
