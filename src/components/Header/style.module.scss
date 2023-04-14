@@ -1,3 +1,5 @@
+@import '../../styles/variable';
+
 .header {
     position: fixed;
     left: 0;
@@ -14,13 +16,14 @@
             position: relative;
             width: 28px;
             height: 30px;
+            z-index: 900;
 
             span {
                 position: absolute;
                 display: block;
                 width: 100%;
                 height: 2px;
-                background-color: rgb(255, 255, 255);
+                background-color: $primary_color;
                 margin-top: 8px;
                 transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1);
             }
@@ -36,6 +39,36 @@
             }
             span:last-child {
                 transform: rotate(45deg);
+            }
+        }
+    }
+
+    .drawer {
+        background-color: rgb(49, 54, 60);
+        color: $primary_color;
+        width: 300px !important;
+        overflow-y: auto;
+
+        nav {
+            padding-top: 100px;
+
+            .nav {
+                display: flex;
+                justify-content: center;
+
+                ul {
+                    list-style: none;
+                    margin-bottom: 2rem;
+
+                    li {
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        margin-top: 20px;
+                    }
+                    li:hover {
+                        color: $secondary_color;
+                    }
+                }
             }
         }
     }

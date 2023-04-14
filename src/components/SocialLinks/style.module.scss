@@ -1,0 +1,15 @@
+@import '../../styles/variable';
+
+.social_links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+        width: 1.8rem;
+        margin: 0 0.75rem;
+    }
+    li:hover {
+        color: $secondary_color;
+    }
+}
