@@ -50,6 +50,11 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/blogs" onClick={handleMenuIcon}>
+                                    Blogs
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/contact" onClick={handleMenuIcon}>
                                     Contact
                                 </Link>
