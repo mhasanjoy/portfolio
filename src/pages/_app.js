@@ -1,5 +1,6 @@
 import CustomCursor from '@/components/CustomCursor';
 import Layout from '@/components/Layout';
+import AppProvider from '@/config/app.context';
 import '@/styles/globals.scss';
 import Head from 'next/head';
 
@@ -19,9 +20,11 @@ export default function App({ Component, pageProps }) {
                 <link rel="icon" href="/favicon/favicon.ico" />
             </Head>
             <CustomCursor />
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
+            <AppProvider>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </AppProvider>
         </>
     );
 }
